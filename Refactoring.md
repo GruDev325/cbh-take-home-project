@@ -11,4 +11,4 @@ You will be graded on the exhaustiveness and quality of your unit tests, the dep
 ## Your Explanation Here
 1. I added all possisble test cases in case of having no param, object param with partitionKey, object param with different keynames, partitionKey length bigger than 256 etc.
 2. Original code had unnessessary if statements. We need evaluate event param has value or not, after that we need to check event param is object or not, if yes we can check if it has partitionKey key. We only have the case of partitionKey length bigger than Max partition key length when the event param is object and partionKey key. Here original codebase duplicated the evaluation process. That reduces the performance of the function.
-3.I added comments on the refactored codebase dpk.js
+3. I added comments on the refactored codebase dpk.js
