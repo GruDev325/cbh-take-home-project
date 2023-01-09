@@ -23,21 +23,22 @@ Time/effort estimates: 0.5hr
 Implementation details:
 Add a new FacilityVSAgent Datatable.
 This table contains the relation between Facilities and Agents.
-This table has 3 fields: pk, Facility_ID, Agent_ID.
+This table has 4 fields: pk, Facility_ID, Agent_ID and custom ID.
 Here Facility_ID, Agent_ID are same as pk of Facility Table and Agents Table respectively.
-Pk is used as custom ID for Agents in Facilities.
+Custom ID is inputed by Facility Manager or Admin.
+According to Facilites and Agents, we need to add some codes to make the custom ID unique.
 
 Ticket2.
 Subject: Add a new Function named getShiftsByFacilitywitCustomID
-Acceptance criteria: 
-Time/effort estimates:
+Acceptance criteria: Result list of shifts must contain metadata of Agents with Custom ID.
+Time/effort estimates: 1hr
 Implementation details:
 Add a new function to get the list of shifts for a facility that contains the metadata about the Agent with the custom ID.
 
 
 Ticket3.
-Subject: Add a new Function named generateReportByFacilityAgent
-Acceptance criteria: 
-Time/effort estimates:
+Subject: Add a new Function named generateReportByCustomID
+Acceptance criteria: Parameters: Facility ID, Custom ID
+Time/effort estimates: 1hr
 Implementation details:
-This function is called with the lists of shifts created by getShiftsByFacilityAgent function.
+This function returns the PDF report of a specific Agent with custom ID on a specific Facility.
